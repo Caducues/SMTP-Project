@@ -1,0 +1,24 @@
+﻿@model OutlookSmtpApp.Models.EmailModel
+
+<div class="container mt-5">
+    <h2>E-posta Gönder</h2>
+    <form asp-action="Send" method="post">
+        <div class="mb-3">
+            <label>Alıcı E-posta</label>
+            <input asp-for="To" class="form-control" />
+        </div>
+        <div class="mb-3">
+            <label>Konu</label>
+            <input asp-for="Subject" class="form-control" />
+        </div>
+        <div class="mb-3">
+            <label>Mesaj</label>
+            <textarea asp-for="Body" class="form-control"></textarea>
+        </div>
+        <button type="submit" class="btn btn-success">Gönder</button>
+    </form>
+    @if (ViewBag.Message != null)
+    {
+        <div class="alert alert-info mt-3">@ViewBag.Message</div>
+    }
+</div>

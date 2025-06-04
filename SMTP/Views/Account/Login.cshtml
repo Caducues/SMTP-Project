@@ -1,0 +1,20 @@
+﻿@model OutlookSmtpApp.Models.LoginModel
+
+<div class="container mt-5">
+    <h2>Giriş Yap</h2>
+    <form asp-action="Login" method="post">
+        <div class="mb-3">
+            <label>Kullanıcı Adı</label>
+            <input asp-for="Username" class="form-control" />
+        </div>
+        <div class="mb-3">
+            <label>Şifre</label>
+            <input asp-for="Password" type="password" class="form-control" />
+        </div>
+        <button type="submit" class="btn btn-primary">Giriş</button>
+    </form>
+    @if (ViewBag.Error != null)
+    {
+        <div class="alert alert-danger mt-3">@ViewBag.Error</div>
+    }
+</div>
