@@ -1,24 +1,26 @@
 ﻿@model OutlookSmtpApp.Models.EmailModel
 
-<div class="container mt-5">
-    <h2>E-posta Gönder</h2>
-    <form asp-action="Send" method="post">
-        <div class="mb-3">
-            <label>Alıcı E-posta</label>
-            <input asp-for="To" class="form-control" />
-        </div>
-        <div class="mb-3">
-            <label>Konu</label>
-            <input asp-for="Subject" class="form-control" />
-        </div>
-        <div class="mb-3">
-            <label>Mesaj</label>
-            <textarea asp-for="Body" class="form-control"></textarea>
-        </div>
-        <button type="submit" class="btn btn-success">Gönder</button>
-    </form>
-    @if (ViewBag.Message != null)
-    {
-        <div class="alert alert-info mt-3">@ViewBag.Message</div>
-    }
+<div class="d-flex justify-content-center align-items-center min-vh-100 ">
+    <div class="card shadow p-5" style="width: 100%; max-width: 600px; border-radius: 1rem;">
+        <h3 class="text-center mb-4">📧 E-posta Gönder</h3>
+        <form asp-action="Send" method="post">
+            <div class="form-floating mb-3">
+                <input asp-for="To" class="form-control" placeholder="Alıcı E-posta" />
+                <label for="To">Alıcı E-posta</label>
+            </div>
+            <div class="form-floating mb-3">
+                <input asp-for="Subject" class="form-control" placeholder="Konu" />
+                <label for="Subject">Konu</label>
+            </div>
+            <div class="form-floating mb-3">
+                <textarea asp-for="Body" class="form-control" style="height: 150px" placeholder="Mesaj"></textarea>
+                <label for="Body">Mesaj</label>
+            </div>
+            <button type="submit" class="btn btn-success w-100">Gönder</button>
+        </form>
+        @if (ViewBag.Message != null)
+        {
+            <div class="alert alert-info mt-4 text-center">@ViewBag.Message</div>
+        }
+    </div>
 </div>

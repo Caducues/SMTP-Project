@@ -1,20 +1,22 @@
 ﻿@model OutlookSmtpApp.Models.LoginModel
 
-<div class="container mt-5">
-    <h2>Giriş Yap</h2>
-    <form asp-action="Login" method="post">
-        <div class="mb-3">
-            <label>Kullanıcı Adı</label>
-            <input asp-for="Username" class="form-control" />
-        </div>
-        <div class="mb-3">
-            <label>Şifre</label>
-            <input asp-for="Password" type="password" class="form-control" />
-        </div>
-        <button type="submit" class="btn btn-primary">Giriş</button>
-    </form>
-    @if (ViewBag.Error != null)
-    {
-        <div class="alert alert-danger mt-3">@ViewBag.Error</div>
-    }
+<div class="d-flex justify-content-center align-items-center min-vh-100">
+    <div class="card shadow p-4" style="width: 100%; max-width: 400px; border-radius: 1rem;">
+        <h3 class="text-center mb-4">🔐 Giriş Yap</h3>
+        <form asp-action="Login" method="post">
+            <div class="form-floating mb-3">
+                <input asp-for="Username" class="form-control" placeholder="Kullanıcı Adı" />
+                <label for="Username">Kullanıcı Adı</label>
+            </div>
+            <div class="form-floating mb-3">
+                <input asp-for="Password" type="password" class="form-control" placeholder="Şifre" />
+                <label for="Password">Şifre</label>
+            </div>
+            <button type="submit" class="btn btn-primary w-100">Giriş Yap</button>
+        </form>
+        @if (ViewBag.Error != null)
+        {
+            <div class="alert alert-danger mt-3 text-center">@ViewBag.Error</div>
+        }
+    </div>
 </div>

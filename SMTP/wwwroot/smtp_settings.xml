@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SmtpSettings xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Email>tahaakyuz8@gmail.com</Email>
+  <Password>nybr ayyd krau agoj</Password>
+  <SmtpServer>smtp.gmail.com</SmtpServer>
+</SmtpSettings>

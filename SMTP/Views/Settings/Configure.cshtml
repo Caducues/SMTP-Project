@@ -1,0 +1,63 @@
+﻿@model SmtpSettings
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8 col-lg-6">
+            <div class="card shadow rounded-4 border-0">
+                <div class="card-body p-4">
+                    <h2 class="text-center mb-4 fw-bold text-primary">SMTP Ayarları</h2>
+
+                    <form method="post" novalidate>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">E-posta Adresi</label>
+                            <input type="email" class="form-control" id="email" name="Email" placeholder="ornek@domain.com" required />
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="password" class="form-label">Şifre (Uygulama Parolası)</label>
+                            <input type="password" class="form-control" id="password" name="Password" placeholder="••••••••" required />
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="smtpServer" class="form-label">SMTP Sunucusu</label>
+                            <select class="form-select" id="smtpServer" name="SmtpServer" required>
+                                <option value="" disabled selected>Bir sunucu seçin...</option>
+                                <option value="smtp.outlook.com">Outlook</option>
+                                <option value="smtp.gmail.com">Gmail</option>
+                                <option value="smtp.yandex.com">Yandex</option>
+                                <option value="custom">Özel Sunucu</option>
+                            </select>
+                        </div>
+
+                        <div class="mb-3" id="customSmtpContainer" style="display: none;">
+                            <label for="customSmtp" class="form-label">Özel SMTP Sunucusu</label>
+                            <input type="text" class="form-control" id="customSmtp" name="CustomSmtp" placeholder="smtp.ornek.com" />
+                        </div>
+
+                        <div class="d-grid">
+                            <button type="submit" class="btn btn-primary btn-lg rounded-pill">Kaydet</button>
+                        </div>
+                    </form>
+
+                    @if (!string.IsNullOrEmpty(ViewBag.Message as string))
+                    {
+                        <div class="alert alert-info mt-3" role="alert">
+                            @ViewBag.Message
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        const select = document.getElementById('smtpServer');
+        const customContainer = document.getElementById('customSmtpContainer');
+
+        select.addEventListener('change', function () {
+            customContainer.style.display = this.value === 'custom' ? 'block' : 'none';
+        });
+    </script>
+}
