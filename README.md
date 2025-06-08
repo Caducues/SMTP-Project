@@ -51,9 +51,30 @@ Projeyi çalıştırın.
 
 /Email/Send sayfasından test e-postası gönderin.
 
-## ✅ Gereksinimler
+✅ Gereksinimler
 .NET 6+ / ASP.NET Core MVC
 
 SMTP bilgileri (Outlook hesabı , gmail vb)
 
 E-posta gönderimi için doğru port (587) ve SSL etkinleştirilmiş olmalıdır
+
+# Mail Gönderim Uygulaması
+
+Bu uygulama ile kendi e-posta hesabınız üzerinden kolayca mail gönderebilirsiniz.
+
+## ✉️ Kullanım
+
+1. **Email Ayarları** sayfasına gidin.
+2. Kendi **e-posta adresinizi** ve **uygulama şifrenizi (application password)** girerek giriş yapın.
+3. Giriş işlemi başarılı olduktan sonra aşağıdaki bilgileri doldurun:
+   - Alıcının e-posta adresi
+   - Mail başlığı
+   - Mail içeriği
+4. Tüm bilgileri girdikten sonra "Gönder" butonuna tıklayarak mailinizi yollayabilirsiniz.
+
+## ⚠️ Notlar
+
+- Gmail gibi servislerde uygulama şifresi oluşturmak için [Google Hesap Ayarları](https://myaccount.google.com/security) sayfasından "Uygulama şifreleri" bölümünü kullanabilirsiniz.
+- Girdiğiniz bilgiler sadece oturum süresince saklanır, güvenliğiniz için işlem bitiminde oturumu kapatmayı unutmayın.
+
+
