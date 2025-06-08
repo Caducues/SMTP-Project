@@ -1,0 +1,96 @@
+\doxysection{SMTP/\+Program.cs File Reference}
+\label{_program_8cs}\index{SMTP/Program.cs@{SMTP/Program.cs}}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+builder.\+Services. \textbf{ Add\+Controllers\+With\+Views} ()
+\item 
+\textbf{ if} (!app.\+Environment.\+Is\+Development())
+\item 
+app. \textbf{ Use\+Https\+Redirection} ()
+\item 
+app. \textbf{ Use\+Static\+Files} ()
+\item 
+app. \textbf{ Use\+Routing} ()
+\item 
+app. \textbf{ Use\+Authorization} ()
+\item 
+app. \textbf{ Map\+Controller\+Route} (name\+:"{}default"{}, pattern\+:"{}\{controller=Account\}/\{action=Login\}/\{id?\}"{})
+\item 
+app. \textbf{ Run} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+var \textbf{ builder} = Web\+Application.\+Create\+Builder(args)
+\item 
+var \textbf{ app} = builder.\+Build()
+\end{DoxyCompactItemize}
+
+
+\label{doc-func-members}
+\doxysubsection{Function Documentation}
+\index{Program.cs@{Program.cs}!AddControllersWithViews@{AddControllersWithViews}}
+\index{AddControllersWithViews@{AddControllersWithViews}!Program.cs@{Program.cs}}
+\doxysubsubsection{AddControllersWithViews()}
+{\footnotesize\ttfamily \label{_program_8cs_af8107f2f8ff8e8de22a684c8c8ad3e99} 
+builder.\+Services. Add\+Controllers\+With\+Views (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\index{Program.cs@{Program.cs}!if@{if}}
+\index{if@{if}!Program.cs@{Program.cs}}
+\doxysubsubsection{if()}
+{\footnotesize\ttfamily \label{_program_8cs_af2d0c02efe3fbc2d94e5b6e316777c4d} 
+if (\begin{DoxyParamCaption}\item[{!}]{app\+::\+Environment\+::\+Is\+Development}{()}\end{DoxyParamCaption})}
+
+\index{Program.cs@{Program.cs}!MapControllerRoute@{MapControllerRoute}}
+\index{MapControllerRoute@{MapControllerRoute}!Program.cs@{Program.cs}}
+\doxysubsubsection{MapControllerRoute()}
+{\footnotesize\ttfamily \label{_program_8cs_a9486e589f1c46a4ff0cdaa74afc3dddd} 
+app. Map\+Controller\+Route (\begin{DoxyParamCaption}\item[{name\+:"{}default"{}}]{}{, }\item[{pattern\+:"{}\{controller=Account\}/\{action=Login\}/\{id?\}"{}}]{}{}\end{DoxyParamCaption})}
+
+\index{Program.cs@{Program.cs}!Run@{Run}}
+\index{Run@{Run}!Program.cs@{Program.cs}}
+\doxysubsubsection{Run()}
+{\footnotesize\ttfamily \label{_program_8cs_aaa3dbf02e269c3ef7e8546d290c6b3dd} 
+app. Run (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\index{Program.cs@{Program.cs}!UseAuthorization@{UseAuthorization}}
+\index{UseAuthorization@{UseAuthorization}!Program.cs@{Program.cs}}
+\doxysubsubsection{UseAuthorization()}
+{\footnotesize\ttfamily \label{_program_8cs_af6f72d752b2e73aa0292f74bd13237ab} 
+app. Use\+Authorization (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\index{Program.cs@{Program.cs}!UseHttpsRedirection@{UseHttpsRedirection}}
+\index{UseHttpsRedirection@{UseHttpsRedirection}!Program.cs@{Program.cs}}
+\doxysubsubsection{UseHttpsRedirection()}
+{\footnotesize\ttfamily \label{_program_8cs_aa4d447fc3129a3aa301d736b8bd04ae9} 
+app. Use\+Https\+Redirection (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\index{Program.cs@{Program.cs}!UseRouting@{UseRouting}}
+\index{UseRouting@{UseRouting}!Program.cs@{Program.cs}}
+\doxysubsubsection{UseRouting()}
+{\footnotesize\ttfamily \label{_program_8cs_a94c810d266751293a2d511a720a5625f} 
+app. Use\+Routing (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\index{Program.cs@{Program.cs}!UseStaticFiles@{UseStaticFiles}}
+\index{UseStaticFiles@{UseStaticFiles}!Program.cs@{Program.cs}}
+\doxysubsubsection{UseStaticFiles()}
+{\footnotesize\ttfamily \label{_program_8cs_a906a3ce545279a7a73941f1d7b64d7cf} 
+app. Use\+Static\+Files (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+\label{doc-var-members}
+\doxysubsection{Variable Documentation}
+\index{Program.cs@{Program.cs}!app@{app}}
+\index{app@{app}!Program.cs@{Program.cs}}
+\doxysubsubsection{app}
+{\footnotesize\ttfamily \label{_program_8cs_a7b225fcb720e4d5ed2bbf60e28a25e6d} 
+var app = builder.\+Build()}
+
+\index{Program.cs@{Program.cs}!builder@{builder}}
+\index{builder@{builder}!Program.cs@{Program.cs}}
+\doxysubsubsection{builder}
+{\footnotesize\ttfamily \label{_program_8cs_a2f78352277081c620fd4cf92a5ce15e5} 
+var builder = Web\+Application.\+Create\+Builder(args)}
+
