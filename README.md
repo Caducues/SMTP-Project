@@ -51,7 +51,7 @@ Projeyi çalıştırın.
 
 /Email/Send sayfasından test e-postası gönderin.
 
-✅ Gereksinimler
+## ✅ Gereksinimler
 .NET 6+ / ASP.NET Core MVC
 
 SMTP bilgileri (Outlook hesabı , gmail vb)
